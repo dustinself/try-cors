@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try CORS</title>
+</head>
+
+<body>
+  <h1>Hello, I'm the webpage</h1>
+  <div id="response"></div>
+  <script>
+    async function makeGetRequest() {
+      const url = 'https://meritenergycompany-dustin-development-try-cors-srv.cfapps.us10-001.hana.ondemand.com/rest/corstest/go';
+      const options = {
+        method: 'GET'
+      };
+      const response = await fetch(url, options);
+      console.log(response);
+    }
+    window.onload = makeGetRequest;
+  </script>
+</body>
+
+</html>
