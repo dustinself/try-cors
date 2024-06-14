@@ -40,11 +40,6 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: try-cors-auth
-    properties:
-      CORS:
-        - uriPattern: .
-          allowedOrigin:
-            - host: "*"
 
 resources:
   - name: try-cors-auth
